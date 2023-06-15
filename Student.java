@@ -1,7 +1,7 @@
 import java.util.Scanner;
-class Student extends Exception{
+class R extends Exception{
 String msg;
-Student(String msg){
+R(String msg){
 super(msg);
 this.msg=msg;
 }
@@ -9,18 +9,18 @@ public String toString(){
 return msg;
 }
 }
-class Main{
+class Student{
 public static void main(String args[]){
 Scanner sc=new Scanner(System.in);
-int rollno=sc.nextInt();
+int rollno=sc.newInt();
 String name=sc.nextLine();
 int marks=sc.nextInt();
 try{
 if(marks<0){
-throw new Student("Marks should not be negative");
+throw new R("Marks should not be negative");
 }
 }
-catch(Student ex){
+catch(R ex){
 System.out.println(ex);
 System.out.println(ex.getMessage());
 }
