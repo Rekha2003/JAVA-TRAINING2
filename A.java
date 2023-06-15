@@ -1,10 +1,10 @@
-class A{
-A get(){return this;}
+interface printable{
+void print();
 }
-class B1 extends A{
-B1 get(){return this;}
-void message(){System.out.println("welcome to covariant return type");}
+class A implements printable{
+public void print(){System.out.println("Hello");}
 public static void main(String args[]){
-new B1().get().message();
+A obj=new A();
+obj.print();
 }
 }

@@ -1,28 +1,14 @@
-import java.util.Scanner;
-class Student extends Exception{
-String msg;
-Student(String msg){
-super(msg);
-this.msg=msg;
-}
-public String toString(){
-return msg;
-}
-}
 class Main{
 public static void main(String args[]){
-Scanner sc=new Scanner(System.in);
-int rollno=sc.nextInt();
-String name=sc.nextLine();
-int marks=sc.nextInt();
 try{
-if(marks<0){
-throw new Student("Marks should not be negative");
-}
-}
-catch(Student ex){
-System.out.println(ex);
-System.out.println(ex.getMessage());
-}
-}
-}
+int arr[]={1,2,3,4,5};
+//code that may not throw an exception
+System.out.println(arr[10]);//this statement will throw exception
+}catch(ArrayIndexOutOfBoundsException e){
+//code to handle ArrayIndexOutOfBoundsException e
+System.out.println("ArrayIndexOutOfBoundsException");
+}finally{
+//code that is already executed
+System.out.println("finally block");
+}}}
+
